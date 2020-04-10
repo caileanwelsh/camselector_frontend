@@ -1,16 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { HeaderComponent } from './header/header.component';
+import { MyMaterialModule } from './material.module/material.module';
+import { FooterComponent } from './footer/footer.component';
+import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UploadComponent } from './upload/upload.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    WelcomeScreenComponent,
+    DashboardComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MyMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
