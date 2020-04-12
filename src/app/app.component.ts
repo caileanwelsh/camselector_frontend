@@ -9,11 +9,16 @@ import { MatIconRegistry } from '@angular/material/icon';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+// TODO: Move to Material Module
 export class AppComponent {
+  people: any[] = [];
+
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) { 
     iconRegistry.addSvgIcon(
       'satellite',
       sanitizer.bypassSecurityTrustResourceUrl('assets/imgs/Satellite_Icon.svg')
-    );
+    ); 
   }
+
 }

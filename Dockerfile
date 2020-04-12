@@ -12,13 +12,13 @@ COPY package*.json /app/
 
 #installs dependencies
 RUN npm install
-RUN npm install -g @angular/cli
 
 #gets all code for app
 COPY . /app/
 
 #exposes port for access 
-EXPOSE 4200 49153
+EXPOSE 4200
 
 # starts app - edit to package.json ensures start means host 0.0.0.0
 CMD ["npm", "start"]
+
