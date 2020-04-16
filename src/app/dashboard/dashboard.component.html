@@ -1,6 +1,9 @@
 <h1>Incident</h1>
 
 <mat-action-list>
-    <button mat-list-item >Incd1</button>
-    <button mat-list-item >incd2</button>
+    <a *ngFor="let incident of incidents"
+        mat-list-item
+        routerLink = "/incident/{{incident.id}}">
+        {{incident.id}} T1
+    </a>
 </mat-action-list>

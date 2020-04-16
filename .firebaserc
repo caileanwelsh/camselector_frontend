@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "camselector": {
+      "hosting": {
+        "frontend": [
+          "camselector"
+        ]
+      }
+    }
+  }
+}

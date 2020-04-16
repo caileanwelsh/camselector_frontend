@@ -12,6 +12,7 @@ COPY package*.json /app/
 
 #installs dependencies
 RUN npm install
+RUN npm install -g '@angular/cli'
 
 #gets all code for app
 COPY . /app/

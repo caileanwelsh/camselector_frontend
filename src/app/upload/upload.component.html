@@ -1,9 +1,12 @@
-<h1>File Upload</h1>
-<p>Use textbox below to send set of CDMs in a JSON format to server.</p>
+<div class=instructions>
+    <h1>File Upload</h1>
+    <p>Use textbox below to send set of CDMs in a KVN format to server.</p>
+</div>
 
-<form class="upload-form">
+<form class="upload-form" method="post" action="/">
     <mat-form-field class="textboxUpload">
-        <mat-label>Upload set of CDMs:</mat-label>
+        <mat-label>Upload your CDM:</mat-label>
         <textarea matInput cdkTextareaAutosize="true"></textarea>
     </mat-form-field>
+    <button type="submit" mat-raised-button color="accent">Upload</button>
 </form>
