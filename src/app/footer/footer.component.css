@@ -2,7 +2,7 @@ mat-toolbar{
     height: auto;
     justify-content: center;
     
-    position: sticky;
+    position: absolute;
     bottom: 0;
 }
 

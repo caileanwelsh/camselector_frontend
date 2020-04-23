@@ -1,9 +1,9 @@
 <h1>Incident</h1>
-
+<h2 *ngIf="message">{{message}}</h2>
 <mat-action-list>
     <a *ngFor="let incident of incidents"
         mat-list-item
         routerLink = "/incident/{{incident.id}}">
-        {{incident.id}} T1
+        Hello T1
     </a>
 </mat-action-list>

@@ -1,12 +1,22 @@
-<div class=instructions>
-    <h1>File Upload</h1>
-    <p>Use textbox below to send set of CDMs in a KVN format to server.</p>
-</div>
-
-<form class="upload-form" method="post" action="/">
-    <mat-form-field class="textboxUpload">
-        <mat-label>Upload your CDM:</mat-label>
-        <textarea matInput cdkTextareaAutosize="true"></textarea>
-    </mat-form-field>
-    <button type="submit" mat-raised-button color="accent">Upload</button>
-</form>
+<h1>File Upload</h1>
+<mat-card>
+    <div class="instructions">
+        <p>Use file uploader below to upload your valid CDM. <br>
+            Click validate and the file will be uploaded and verified that a valid CDM has been sent. <br>
+            If in a valid form, use subsequent textbox to insert your set of CAMs. <br>
+            Once your CAMs are validated an incident will be created using your CDM and CAM set.
+        </p>
+    </div>
+    <mat-card-content>
+        <div class="systemMessage" *ngIf="message">
+            {{message}}
+        </div>
+            
+        <input type="file" #fileUpload id="fileUpload" accept=".cdm, .cam">
+        <mat-progress-bar [value]=50></mat-progress-bar>
+    </mat-card-content>
+    <mat-card-actions>
+        <button type="button" mat-raised-button color="accent" 
+            (click)="validateCDM(fileUpload.value)">Validate</button>
+    </mat-card-actions>
+</mat-card>

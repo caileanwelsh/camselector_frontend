@@ -10,6 +10,7 @@ import { Incident } from '../modelTypes';
 })
 export class DashboardComponent implements OnInit {
   incidents: Incident [] = [];
+  message: String = '';
 
   constructor(
     private incidentService : IncidentsService
@@ -21,6 +22,19 @@ export class DashboardComponent implements OnInit {
 
   getIncidents(): void{
     this.incidentService.getAllIncidents().
-    subscribe(incidents => this.incidents = incidents);
+    subscribe(res => {
+      if (res['incidents'].length < 1)
+        this.message = 'No incidents in the database';
+      this.incidents = res['incidents'];
+    });
   }
+
+  /*
+  createIncident(): void{
+    this.incidentService.createIncident().
+    subscribe(res => {
+      this.message = res['message'];
+    });
+  }
+  */
 }

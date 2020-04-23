@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'cailean.tech/api'
+  apiURL: 'camselector.cailean.tech/api'
 };
